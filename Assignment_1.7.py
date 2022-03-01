@@ -1,15 +1,12 @@
 ﻿userList = ['foo', 'bar', 99.3]
+strOut = ""
 
-# for i in userList:
-#     if type(userList[i]) != str:
-#         userList[i] = str(userList[i])
+for i in userList:
+    if type(i) == str:
+        strTemp = i
+    else:
+        i = str(i)
+        strTemp = i
+    strOut = strOut + strTemp
 
-
-# concOutput = userList[0] + userList[1] + userList[2]
-
-print (type(userList[1]))
-
-# print (concOutput)
-
-
-
+print(strOut)

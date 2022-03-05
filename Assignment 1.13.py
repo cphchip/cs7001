@@ -13,13 +13,16 @@
     
     # Input: [1, 2, 2, 3, 3, 3]
     # Output: True
+   
+ithList = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6]
 
 def is_ith(p1 : list) -> bool:
+    bList = []
     for i in ithList:
-        if ithList.count(i) == ithList[i]:
-            check = True
-    return check
-
-ithList = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6]
+        if ithList.count(i) == i:
+            bList.append(True)
+        else:
+            bList.append(False)
+    return all(bList)
 
 print(is_ith(ithList))

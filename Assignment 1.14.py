@@ -12,12 +12,14 @@
 #     Input: ['cat', 'dog', 'shatter', 'donut', 'at', 'todo', '']
 #     Output: shatter
 
-wordList = ['cat', 'dog', 'shatter', 'donut', 'at', 'todo', '']
-# print (len(wordList[3]))
-longestWordLength = 0
-for i in wordList:
-    # wordLength = 
-    if len(i) > longestWordLength:
-        longestWord = i
+def longest_str (P1: list) -> str:
+    longestWordLength = 0
+    for i in wordList:
+        if len(i) > longestWordLength:
+            longestWord = i
+            longestWordLength = len(i)
+    return longestWord
 
-print(longestWord)
+wordList = ['cat', 'dog', 'shatter', 'donut', 'at', 'todo', '']
+
+print(longest_str(wordList))

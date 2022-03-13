@@ -15,8 +15,22 @@
 # Input: 'bogus'
 # Output: ['s', 'u', 'g', 'o', 'b']
 
+
+
+userStrList = []
+
+def split_str (s:str) -> list:
+
+    if ' ' not in userString and ',' not in userString:
+        for i in userString:
+            userStrList.append(i)
+        userStrList = userStrList[::-1]
+    elif ',' in userString:
+        userStrList = [userString.split(',')]
+    else:
+        userStrList = [userString.split(' ')]
+
+    return userStrList
+
 userString = str(input("Enter your string: "))
-
-strLength = len(userString)
-
-print(userString[::-1])
+print(split_str(userString))

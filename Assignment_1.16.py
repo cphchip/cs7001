@@ -14,26 +14,27 @@
 # Input: [1,2,3,'z',5,6] , 2
 # Output: [6,5]
 
+from collections import UserString
+
+
 userList = list(input("Enter your list of numbers: "))
 userNumber = int(input("Enter the number of high numbers: "))
-# print(userList)
-compNumb = 0 
-highList = []
-counter = 0
 
-highList = userList
+def largest_k(mylist: list, knum: int) -> list:
+    highList = []
 
-for x in highList:
-    for i in userList:
-        if int(i) < int(x):
-            highList.remove(x)
+    maxValue = 0
+    c = 0
 
+    while c < knum:
+        for i in mylist:
+            if int(maxValue) < int(i):
+                maxValue = i
+        c += 1
+        highList.append(maxValue)
+        mylist.remove(maxValue)
+        maxValue = 0
+        
+    return highList
 
-    # if len(highList) == 0:
-    #     highList.append(i)
-    # if int(userList(i)) > int(highList[0]):
-    #     for x in highList:
-    #         if userList(i) > highList(x):
-    #             highList.append(i)
-print(highList)
-
+print(largest_k(userList, userNumber))

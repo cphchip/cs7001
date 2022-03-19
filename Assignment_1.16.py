@@ -14,21 +14,24 @@
 # Input: [1,2,3,'z',5,6] , 2
 # Output: [6,5]
 
-from collections import UserString
-
-
 userList = list(input("Enter your list of numbers: "))
 userNumber = int(input("Enter the number of high numbers: "))
 
-def largest_k(mylist: list, knum: int) -> list:
-    highList = []
 
+
+def largest_k(mylist: list, knum: int) -> list:
+    for i in mylist:
+        if i.isdigit() == False:
+            mylist.remove(i)
+
+    mylist = [int(i) for i in mylist]
+
+    highList = []
     maxValue = 0
     c = 0
-
     while c < knum:
         for i in mylist:
-            if int(maxValue) < int(i):
+            if maxValue < i:
                 maxValue = i
         c += 1
         highList.append(maxValue)

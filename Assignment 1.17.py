@@ -10,16 +10,17 @@
 # Input: [1,2,4,4,5,6] 
 # Output: False
 
-userList = [1, 2, 4, 4, 5, 6]
+userList = [1, 2, 3, 4, 5, 1]
 
-bCheck = True
-for i in userList:
-    for x in userList:
-        if i == x and userList.index(i) != userList.index(x):
-            bCheck = False
-            break
-        else:
-            bCheck = True
+def all_different (p1: list) -> bool:
+
+    bCheck = True
+    if len(p1) != len(set(p1)):
+        bCheck = False
+    else:
+        bCheck = True
+
+    return bCheck
 
 
-print (bCheck)
+print (all_different(userList))

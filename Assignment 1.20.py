@@ -12,17 +12,24 @@
 # Input: ['ably', 'abruptly', 'abecedary', 'apparently', 'acknowledgedly']
 # Output: ['ay', 'auy', 'aeeay', 'aaey', 'aoeey']
 
-wordList = ['w3resource', 'Python', 'Java', 'C++']
-vowelList = ['a', 'e', 'i', 'o','u','y']
+wordList = ['w3resource', 'Pythony', 'Java', 'C++']
+# charList = []
+counter = 0 
 
+vowelList = ['a', 'e', 'i', 'o', 'u', 'y']
+vResult = []
+vString = ''
 
+for i in wordList:
+    for v in vowelList:
+        while counter < len(i):
+            if v == i[counter]:
+                vString = vString + v
+                counter += 1
+            counter = 0
+                # elif i.index('y') == len(i) - 1:
+                #     vString = vString + v 
+        vResult.append(vString)
+        vString = ''
 
-# print('C++' in wordList)
-
-newList = []
-# for i in wordList:
-#     for x in vowelList:
-filter(lambda vowel: 'a' in wordList, wordList)
-# newList.append()
-print(wordList)
-
+print(vResult)

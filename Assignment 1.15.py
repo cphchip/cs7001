@@ -17,10 +17,9 @@
 
 
 
-userStrList = []
 
 def split_str (s:str) -> list:
-
+    userStrList = []
     if ' ' not in userString and ',' not in userString:
         for i in userString:
             userStrList.append(i)

@@ -12,24 +12,33 @@
 # Input: ['ably', 'abruptly', 'abecedary', 'apparently', 'acknowledgedly']
 # Output: ['ay', 'auy', 'aeeay', 'aaey', 'aoeey']
 
-wordList = ['w3resource', 'Pythony', 'Java', 'C++']
+wordList = ['ably', 'abruptly', 'abecedary', 'apparently', 'acknowledgedly']
 # charList = []
-counter = 0 
 
-vowelList = ['a', 'e', 'i', 'o', 'u', 'y']
-vResult = []
-vString = ''
+def vowelFinder (p1: list) -> list:
+    vResult = []
+    vString = ''
+    counter = 0
 
-for i in wordList:
-    for v in vowelList:
+    for i in p1:
         while counter < len(i):
-            if v == i[counter]:
-                vString = vString + v
-                counter += 1
-            counter = 0
-                # elif i.index('y') == len(i) - 1:
-                #     vString = vString + v 
+            if i[counter] == 'a':
+                vString = vString + 'a'
+            elif i[counter] == 'e':
+                vString = vString + 'e'
+            elif i[counter] == 'i':
+                vString = vString + 'i'
+            elif i[counter] == 'o':
+                vString = vString + 'o'
+            elif i[counter] == 'u':
+                vString = vString + 'u'
+            elif i[counter] == 'y' and len(i)-1 == counter:
+                vString = vString + 'y'
+            counter += 1
+        counter = 0
         vResult.append(vString)
         vString = ''
 
-print(vResult)
+    return vResult  
+
+print(vowelFinder(wordList))

@@ -13,7 +13,6 @@
 # Output: ['ay', 'auy', 'aeeay', 'aaey', 'aoeey']
 
 wordList = ['ably', 'abruptly', 'abecedary', 'apparently', 'acknowledgedly']
-# charList = []
 
 def vowelFinder (p1: list) -> list:
     vResult = []
@@ -22,6 +21,7 @@ def vowelFinder (p1: list) -> list:
 
     for i in p1:
         while counter < len(i):
+            print (i[counter])
             if i[counter] == 'a':
                 vString = vString + 'a'
             elif i[counter] == 'e':

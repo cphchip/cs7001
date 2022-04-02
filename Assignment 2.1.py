@@ -4,23 +4,18 @@
 # and return the number of alphabetic (a-z A-Z) characters you read in for the n lines.
 # : def read_count (filename: String, n: int) -> int:
 
-with open('Assignment_2.1_Text.txt') as text:
-    nLines = text.read()
-    text.close()
 
-nList = [nLines.split(' ')]
-# nList = ['ably', 'abruptly', 'abecedary']
-print (type(nList))
 
-charCount = 0
-counter = 0
+def read_count (filename: str, n: int) -> int:
+    strLines = ''
+    with open(filename) as text:
+        for line in range(n-1):
+            strLines = strLines + text.readline()
+            charCount = 0
+            for words in strLines:
+                if words.isalpha():
+                    charCount += 1
+        text.close()
+    return charCount
 
-for n in nList:
-    while counter < len(n):
-        # print (n[counter])
-        if n[counter].isalpha(): 
-            charCount += 1
-        counter += 1
-    counter = 0
-
-print (charCount)
+print (read_count('Assignment_2.1_Text.txt', 3))

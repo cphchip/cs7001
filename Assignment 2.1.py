@@ -9,13 +9,15 @@
 def read_count (filename: str, n: int) -> int:
     strLines = ''
     with open(filename) as text:
-        for line in range(n-1):
+        for line in range(n):
             strLines = strLines + text.readline()
-            charCount = 0
-            for words in strLines:
-                if words.isalpha():
-                    charCount += 1
         text.close()
+    
+    charCount = 0
+    for words in strLines:
+        if words.isalpha():
+            charCount += 1
+    
     return charCount
 
 print (read_count('Assignment_2.1_Text.txt', 3))

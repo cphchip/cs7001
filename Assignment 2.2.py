@@ -7,7 +7,9 @@
 
 def list_to_file (mylist: list, filename: str) -> None:
     file1 = open(filename, "w")
-    file1.writelines(str(mylist))
+    for element in mylist:
+        file1.writelines(str(element))
+        file1.writelines('\n')
     file1.close()
 
     return 0

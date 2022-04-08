@@ -12,6 +12,6 @@ def list_to_file (mylist: list, filename: str) -> None:
         file1.writelines('\n')
     file1.close()
 
-    return 0
+    return
 
 list_to_file ([2,4,6,8,10,33], 'Assignment_2.2_Writing.txt')

@@ -11,15 +11,20 @@ collection = d1.values()
 
 maxVal = 0
 minVal = 0
-trialVal = 0
+trialMaxVal = 0
+trialMinVal = 0
+counter = 0
 
 for values in collection:
     if type(values) == int:
-        
-        if values > maxVal:
-            maxVal = values
-        elif values < maxVal:
-            minVal = values
+        while counter < len(collection):
+            if collection(counter) > trialMaxVal:
+                maxVal = collection(counter)
+                trialMaxVal = maxVal
+            elif collection(counter) < trialMinVal:
+                minVal = trialMinVal
+                trialMinVal = minVal
+            counter += 1
 
 print(maxVal)
 print(minVal)

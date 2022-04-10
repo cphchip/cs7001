@@ -5,26 +5,21 @@
 # IN: {'foo':9, 'bar': 'xyz', 'baz':8, 'boz':4}
 # OUT: (9, 4)
 
-d1 = {'foo':9, 'bar': 'xyz', 'baz':4, 'boz':8}
 
-collection = d1.values()
+def min_max (d1: dict) -> tuple:
 
-maxVal = 0
-minVal = 0
-trialMaxVal = 0
-trialMinVal = 0
-counter = 0
+    collection = list(d1.values())
+    intValues = []
 
-for values in collection:
-    if type(values) == int:
-        while counter < len(collection):
-            if collection(counter) > trialMaxVal:
-                maxVal = collection(counter)
-                trialMaxVal = maxVal
-            elif collection(counter) < trialMinVal:
-                minVal = trialMinVal
-                trialMinVal = minVal
-            counter += 1
+    for values in collection:
+        if type(values) == int:
+            intValues.append(values)
+        maxVal = max(intValues)
+        minVal = min(intValues)
 
-print(maxVal)
-print(minVal)
+    tupMinMax = (maxVal, minVal)
+
+    return tupMinMax
+
+userDictionary = {'foo':9, 'bar': 'xyz', 'baz':4, 'boz':8}
+print(min_max(userDictionary))

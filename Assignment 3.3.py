@@ -14,12 +14,12 @@ def min_max (d1: dict) -> tuple:
     for values in collection:
         if type(values) == int:
             intValues.append(values)
-        maxVal = max(intValues)
-        minVal = min(intValues)
+    maxVal = max(intValues)
+    minVal = min(intValues)
 
     tupMinMax = (maxVal, minVal)
 
     return tupMinMax
 
-userDictionary = {'foo':9, 'bar': 'xyz', 'baz':4, 'boz':8}
+userDictionary = {'foo':9, 'bar': 'xyz', 'baz':8, 'boz':4}
 print(min_max(userDictionary))

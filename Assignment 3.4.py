@@ -21,10 +21,14 @@ def avg (d1: dict) -> None:
     
     averageValue = mean(intValues)
 
-    # for keys in d1:
+    for values in d1:
+        if type(d1[values]) == int:
+            d1[values] = averageValue
 
+    print (d1)
 
     return
 
-print (avg(userDict))
+avg(userDict)
+
 

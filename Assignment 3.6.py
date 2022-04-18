@@ -9,7 +9,6 @@ userList = [2, 'foo', 3.4737, (4,5), 'zzz']
 def count1 (p1: list) -> int:
     counter = 0
     for item in p1:
-        # while type(item) != tuple:
         if type(item) != tuple:
             counter += 1
         else:

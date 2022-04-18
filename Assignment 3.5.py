@@ -14,20 +14,14 @@ dict1 = {'x': '10.12', 'y': '20.23', 'z': '30'}, {'p': '40.00', 'q': '50.19', 'r
 def str_to_num (d1: dict) -> dict:
 
     for d in d1:
-        # valueList = d.values()
-        # valueList = float(valueList)
-        # print (valueList)
-        
         for value in d:
             if type(d[value]) == str:
                 if '.' in d[value]:
                     d[value] = float(d[value])
                 else:
                     d[value] = int(d[value])
-    
+
     return d1
     
 print(str_to_num (dict1))
 
-# print (type(dict1))
-# print (dict1)

@@ -8,29 +8,26 @@
 # IN: {'x': '10.12', 'y': '20.23', 'z': '30'}, {'p': '40.00', 'q': '50.19', 'r': '60'}
 # OUT: {'x': 10.12, 'y': 20.23, 'z': 30.0}, {'p': 40.0, 'q': 50.19, 'r': 60}
 
-dict1 = {'x': '10', 'y': '20', 'z': '30'}, {'p': '40', 'q': '50', 'r': '60'}
-# dict1 = {'x': '10.12', 'y': '20.23', 'z': '30'}, {'p': '40.00', 'q': '50.19', 'r': '60'}
+# dict1 = {'x': '10', 'y': '20', 'z': '30'}, {'p': '40', 'q': '50', 'r': '60'}
+dict1 = {'x': '10.12', 'y': '20.23', 'z': '30'}, {'p': '40.00', 'q': '50.19', 'r': '60'}
 
-for d in dict1:
-    # valueList = d.values()
-    # valueList = float(valueList)
-    # print (valueList)
+def str_to_num (d1: dict) -> dict:
+
+    for d in d1:
+        # valueList = d.values()
+        # valueList = float(valueList)
+        # print (valueList)
+        
+        for value in d:
+            if type(d[value]) == str:
+                if '.' in d[value]:
+                    d[value] = float(d[value])
+                else:
+                    d[value] = int(d[value])
     
-    for value in d:
-        if type(d[value]) == str:
-            d[value] = int(d[value])
-
-        # elif type(d[value]) == 
-
-        # if type(d[value])
-
-        # if type(d[value]) == str:
-        #     if isinstance(d[value], int):
-        #         d[value] = int(d[value])
-        #     elif isinstance(d[value], float):
-        #         d[value] = float(d[value])
+    return d1
     
-print (dict1)
+print(str_to_num (dict1))
 
 # print (type(dict1))
 # print (dict1)

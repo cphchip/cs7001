@@ -6,3 +6,12 @@
 # 3
 # OUT: [3, 5, 7]
 # Original list of tuples:
+
+def tup1 (p1: list) -> list:
+    newList = []
+    for t in p1:
+        newList.append(t[0] + t[1])
+
+    return newList
+
+print(tup1([(1, 2), (2, 3), (3, 4)]))

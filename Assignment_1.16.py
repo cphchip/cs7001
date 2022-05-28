@@ -14,29 +14,26 @@
 # Input: [1,2,3,'z',5,6] , 2
 # Output: [6,5]
 
-userList = list(input("Enter your list of numbers: "))
-userNumber = int(input("Enter the number of high numbers: "))
-
-
+userList = list(input("Enter your list of numbers: ")) # Prompt user for list of numbers
+userNumber = int(input("Enter the number of high numbers: ")) # Prompt user for quantity of high numbers to return
 
 def largest_k(mylist: list, knum: int) -> list:
-    for i in mylist:
+    for i in mylist: # Checks each item in the list to verify they are digits
         if i.isdigit() == False:
-            mylist.remove(i)
+            mylist.remove(i) # Remove items that if they are not digits
 
-    mylist = [int(i) for i in mylist]
+    mylist = [int(i) for i in mylist] # Forces each item in the list to be an integer
 
-    highList = []
-    maxValue = 0
-    c = 0
-    while c < knum:
+    highList = [] # Establish an empty list variable to return the result
+    c = 0 # Counter variable
+    while c < knum: # While loop to ensures user designated quantity of values is returned 
+        maxValue = 0 # Establish a max value for comparison as 0 to ensure it'll be overwritten for positive numbers
         for i in mylist:
-            if maxValue < i:
-                maxValue = i
-        c += 1
-        highList.append(maxValue)
-        mylist.remove(maxValue)
-        maxValue = 0
+            if maxValue < i: # Compares max value to current value
+                maxValue = i  # Reassigns max value to current value if current value is higher
+        c += 1 # Counter advance
+        highList.append(maxValue) # Adds the values to list to return to user
+        mylist.remove(maxValue) # Ensures same result isn't returned more than once
         
     return highList
 

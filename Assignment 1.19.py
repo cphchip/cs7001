@@ -25,8 +25,9 @@
 gradeList = [5.0, 4.7, 3.4, 3.0, 2.7, 2.4, 2.0, 1.7, 1.4, 0.0]
 
 def grades_to_letter (p1: list) -> list:
-    letterGradeList = []
-    for x in p1:
+    letterGradeList = [] # Variable to hold final return values
+    for x in p1: # Loop through each GPA in the list
+        # Use if statements to assign letter grades and append those to the grade list
         if x >= 4.0:
             letterGradeList.append('A+')
         elif x >= 3.7 and x < 4.0:
@@ -49,5 +50,4 @@ def grades_to_letter (p1: list) -> list:
             letterGradeList.append('F')
     return letterGradeList
 
-print(grades_to_letter(gradeList))
-
+print(grades_to_letter(gradeList)) # Call function in print statement using values defined above

@@ -1,10 +1,4 @@
 # Assignment 1.1
-# 
-# Write a Python function which accepts the radius of a circle and returns the area. Display area after 
-# function returns.
-# function: def get_area(radius : float)-> float:
-# Input: 1.1
-# Output: 3.8013271108436504
 
 import math
 

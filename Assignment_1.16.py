@@ -1,18 +1,4 @@
 # Assignment_1.16
-# Write a Python function to find the largest k numbers from a given list of ints. Display result after 
-# function returns. 
-
-# function: def largest_k (mylist: List[int], knum: int) -> List[int]:
-
-# Test Cases:
-# Input: [1,2,3,4,5,6] , 3
-# Output: [6,5,4]
-
-# Input: [1,2,3,4,5,6] , 0
-# Output: [ ]
-
-# Input: [1,2,3,'z',5,6] , 2
-# Output: [6,5]
 
 userList = list(input("Enter your list of numbers: ")) # Prompt user for list of numbers
 userNumber = int(input("Enter the number of high numbers: ")) # Prompt user for quantity of high numbers to return

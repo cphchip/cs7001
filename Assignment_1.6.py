@@ -1,12 +1,4 @@
 # Assignment 1.6
-# Write a Python function to test whether a passed letter is a vowel or not. Return True or False. Display 
-# result after function returns. Python does not have a char datatype so simply pass in a string of length 1. 
-# function: def is_vowel (n1: char) -> bool:
-# IN: a
-# OUT: True
-# IN: z
-# OUT: False
-
 
 userVal = str(input("Enter the letter: "))  # User is prompted to enter a letter
 

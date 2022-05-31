@@ -1,16 +1,6 @@
 ﻿# Assignment 1.7
-# Write a Python function to concatenate all elements in a list into a string and return it. Display result 
-# after function returns.
-# function: def make_strl (mylist : List[Any]) -> str:
-# IN: ['foo', 'bar']
-# OUT: 'foobar'
-# IN: ['foo', 23, 99.1, False]
-# OUT: 'foo2399.1False'
-# Note: You will need to convert non-string parameters to strings before concatenating.
-
 
 from typing import Any
-
 
 userList = ['foo', 'bar', False, 99.3, True]
 

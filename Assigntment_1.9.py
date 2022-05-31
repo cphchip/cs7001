@@ -1,23 +1,4 @@
 # Assignment 1.9
-# Write a Python function that will return true if the two given integer values are equal or the absolute 
-# value of their sum or difference is 5.
-# function: def addem (n1 : int, n2: int]) -> bool:
-    # IN: 4,4
-    # OUT: True
-
-    # IN: 3,2
-    # OUT: True
-    
-    # IN: 23,27
-    # OUT: True
-        # Not sure how they think this is True?
-    
-    # IN: 29,27
-    # OUT: True
-        # Not sure how they think this is True?
-    
-    # IN: 23,67
-    # OUT: False
 
 # Get number inputs from the user
 numb1 = int(input("Enter the first number: "))

@@ -1,9 +1,4 @@
 # Assignment 1.11
-# Write a Python function to solve (x + y)^(x + y). Display result after function returns.
-# function: def solve1(x : int, y: int]) -> int:
-# IN: 4,3 (for x and y)
-# OUT: 823543
-
 
 def solve1(x : int, y : int) -> int:
     return (x + y) ** (x + y)

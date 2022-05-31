@@ -1,12 +1,5 @@
 # Assignment 1.12
 
-# Write a Python function to compute the distance between the two points (x1, y1) and (x2, y2). Each 
-# point is provided as a tuple of two ints. Display result after function returns. 
-# function: def solve1(p1: tuple[int], p2: tuple[int]) -> int:
-
-# IN: (2,5), (6,8)
-# OUT: 5
-
 import math
 def solve1(p1 : tuple, p2 : tuple) -> int:
     return math.sqrt((p2[0]-p1[0]) ** 2 + (p2[1]-p1[1]) ** 2)

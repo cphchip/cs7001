@@ -1,10 +1,4 @@
-# 4. Write a Python function to calculate and return the sum of three given numbers. If the values are 
-# equal then return three times of their sum.
-# function: def sum1(n1: int, n2:int, n3: int) -> int:
-# IN: 2,2,2
-# OUT: 18
-# IN: 2,3,4
-# OUT: 9
+# Assignment 1.4
 
 val1 = int(input("Enter the value: ")) # Prompt user for values
 val2 = int(input("Enter the value: "))
